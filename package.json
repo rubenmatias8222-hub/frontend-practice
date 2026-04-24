@@ -1,0 +1,13 @@
+{
+  "name": "ruben-matias-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Ruben Matias - Frontend Developer",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "deploy": "echo 'Ready for deployment to GitHub Pages, Netlify, or Vercel'"
+  },
+  "keywords": ["portfolio", "frontend", "web-development"],
+  "author": "Ruben Matias",
+  "license": "MIT"
+}
