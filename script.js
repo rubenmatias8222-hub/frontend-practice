@@ -57,35 +57,38 @@ if (contactForm) {
        contactForm.addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
     try {
-        const response = await fetch("https://fastapi-backend-8zih.onrender.com/login", {
+        const response = await fetch("https://fastapi-backend-8zih.onrender.com/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                username: username,
-                password: password
+                name: name,
+                email: email,
+                message: message
             })
         });
 
         const data = await response.json();
 
-        const messageBox = document.getElementById("message");
+        const responseBox = document.getElementById("response");
 
-        messageBox.innerText = data.message;
+        responseBox.innerText = data.message;
 
         if (data.success) {
-            messageBox.style.color = "green";
+            responseBox.style.color = "green";
         } else {
-            messageBox.style.color = "red";
+            responseBox.style.color = "red";
         }
 
     } catch (error) {
-        console.log("Error:", error);
-        document.getElementById("message").innerText = "Server error";
+        console.log(error);
+        document.getElementById("response").innerText = "Server error";
     }
 });
+
