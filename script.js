@@ -6,8 +6,8 @@ document.getElementById("contactForm").addEventListener("submit", async function
         email: document.getElementById("email").value,
         message: document.getElementById("message").value
     };
-fetch("https://cyberconnect-backend-1.onrender.com/contact", {
-    
+
+    const response = await fetch("https://cyberconnect-backend-1.onrender.com/contact", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -17,5 +17,5 @@ fetch("https://cyberconnect-backend-1.onrender.com/contact", {
 
     const result = await response.json();
 
-    document.getElementById("response").innerText = result.message;
+    document.getElementById("response").innerText = "Message sent successfully!";
 });
