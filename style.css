@@ -494,6 +494,7 @@ a:hover, button:hover {
 }
 
 @media (max-width: 480px) {
+
     .hero h1 {
         font-size: 2rem;
     }
