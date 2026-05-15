@@ -6,8 +6,8 @@ document.getElementById("contactForm").addEventListener("submit", async function
         email: document.getElementById("email").value,
         message: document.getElementById("message").value
     };
-
-    const response = await fetch("http://http://127.0.0.1:8000/contact", {
+fetch("https://cyberconnect-backend-1.onrender.com/contact", {
+    
         method: "POST",
         headers: {
             "Content-Type": "application/json"
