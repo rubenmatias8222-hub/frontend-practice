@@ -4,34 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberConnect Form</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <h1>Contact Form</h1>
 
     <form id="contactForm">
-        <div>
-            <label>Name</label>
-            <input type="text" id="name" required>
-        </div>
+        <input id="name" placeholder="Name" required>
+        <br><br>
 
-        <div>
-            <label>Email</label>
-            <input type="email" id="email" required>
-        </div>
+        <input id="email" placeholder="Email" required>
+        <br><br>
 
-        <div>
-            <label>Message</label>
-            <textarea id="message" required></textarea>
-        </div>
+        <textarea id="message" placeholder="Message" required></textarea>
+        <br><br>
 
         <button type="submit">Send</button>
     </form>
 
     <div id="response"></div>
-
-    <script src="script.js"></script>
 
 </body>
 </html>
