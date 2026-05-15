@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="2;url=PASTE_CORRECT_URL_HERE">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberConnect Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <p>Redirecting... please wait</p>
+
+    <h1>Contact Form</h1>
+
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <textarea id="message" placeholder="Message" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+
+    <div id="response"></div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
