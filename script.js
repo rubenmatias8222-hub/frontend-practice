@@ -13,7 +13,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
         responseBox.innerText = "Sending message...";
 
-        const response = await fetch("https://cyberconnect-backend-1.onrender.com/contact", {
+        const response = await fetch("http://127.0.0.1:8000/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
